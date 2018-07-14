@@ -30,8 +30,8 @@ class Options extends React.Component {
                 <button onClick={this.props.handleDeleteOptions}>Remove All</button>
                 {this.props.options.length === 0 && <p>Add your dreams</p>}
                 {this.props.options.map((option) => {
-                   
-                   return <Option
+
+                    return <Option
                         key={option}
                         optionText={option}
                         handleDeleteOption={this.props.handleDeleteOption}

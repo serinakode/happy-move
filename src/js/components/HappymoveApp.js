@@ -4,11 +4,11 @@ import { Body } from './Body';
 
 const HappymoveApp = () => {
 
-    return (
-      <div>
-        <Header />
-        <Body />
-      </div>
-    )
-  }
+  return (
+    <div>
+      <Header />
+      <Body />
+    </div>
+  )
+}
 export default HappymoveApp

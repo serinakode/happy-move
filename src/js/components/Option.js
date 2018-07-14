@@ -6,11 +6,11 @@ const Option = (props) => {
             {props.optionText}
             <button onClick={() => {
                 props.handleDeleteOption(props.optionText)
-                }
+            }
             }
             >
-            remove
-            </button>    
+                remove
+            </button>
         </div>
     );
 }

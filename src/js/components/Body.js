@@ -4,7 +4,7 @@ import { Options } from './Options';
 class Body extends React.Component {
     state = {
         option: null,
-        options: [] 
+        options: []
     }
 
     // whenever the body component gets mounted/inserted onto the page
@@ -15,10 +15,10 @@ class Body extends React.Component {
 
     // whenever the props/state of the component changes 
     componentDidUpdate() {
-            this.handleSave()
+        this.handleSave()
     }
-    
-     // when we refresh the page, previous entries would still remain.
+
+    // when we refresh the page, previous entries would still remain.
     handleSave() {
         const result = JSON.stringify(this.state.options)
         localStorage.setItem('options', result);
@@ -54,15 +54,15 @@ class Body extends React.Component {
         if (!option) {
             return 'Enter valid value to add your dream'
         } else if (this.state.options.indexOf(option) > -1) {
-            alert ( 'This option already exists' )
+            alert('This option already exists')
         }
-            
+
         // this.setState((prevState) => ({
         //     options: prevState.options.concat(option)
         // })
 
         this.setState((prevState) => {
-            return { 
+            return {
                 options: prevState.options.concat(option)
             }
         })
@@ -70,9 +70,9 @@ class Body extends React.Component {
 
     render() {
         return (
-        <div>
-            <Options options={this.state.options} handleAddOption={this.handleAddOption} handleDeleteOptions={this.handleDeleteOptions} handleDeleteOption={this.handleDeleteOption} />
-        </div>   
+            <div>
+                <Options options={this.state.options} handleAddOption={this.handleAddOption} handleDeleteOptions={this.handleDeleteOptions} handleDeleteOption={this.handleDeleteOption} />
+            </div>
         )
     }
 }
