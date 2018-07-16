@@ -20,14 +20,14 @@ class Body extends React.Component {
 
     // when we refresh the page, previous entries would still remain.
     handleSave() {
-        const result = JSON.stringify(this.state.options)
+        const result = JSON.stringify(this.state.options) 
         localStorage.setItem('options', result);
     }
 
     // load data first and convert it from JSON data to JS object.
     // showing what's stored in the localstorage 
     handleLoad() {
-        const result = localStorage.getItem('options')
+        const result = localStorage.getItem('options') || ["hello"]
 
         this.setState(() => {
             return {

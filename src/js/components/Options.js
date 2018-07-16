@@ -29,6 +29,7 @@ class Options extends React.Component {
                 </form>
                 <button onClick={this.props.handleDeleteOptions}>Remove All</button>
                 {this.props.options.length === 0 && <p>Add your dreams</p>}
+                {console.log(this.props.options)}
                 {this.props.options.map((option) => {
 
                     return <Option
